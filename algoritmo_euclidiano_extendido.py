@@ -1,4 +1,5 @@
-#Algoritmo Euclidiano Estendido
+#Algoritmo Euclidiano Estendido/ extended euclidean algorithm
+#this basically finds the gcd between two numbers and the linear combination with those two numbers to find gdc
 def algoritmo_euclidiano(a,b):
     # alfa*a + beta*b = mdc
     ao = a
@@ -9,6 +10,8 @@ def algoritmo_euclidiano(a,b):
     yi = 1
     if (a!=0)and(b!=0):
         q = a//b
+        print a,"*m + ",b,"*n = mdc(",a,",",b,")"
+        print "R Q M N"
         print a,"- 1 0"
         print b,"- 0 1"
         while (b>0):
@@ -31,3 +34,8 @@ def algoritmo_euclidiano(a,b):
                 print b,q,"- -"
         mdc = (xi*ao)+(yi*bo)
         #O xi eh o alfa e o yi eh o beta!
+        return mdc
+print "Insert the numbers you want to find the gcd of:"
+a,b = input()
+c = algoritmo_euclidiano(a,b)
+print "gcd:",c
